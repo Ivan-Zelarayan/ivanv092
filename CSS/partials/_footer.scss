@@ -1,0 +1,44 @@
+.pie {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.831);
+    color: white;
+    padding-block: 20px;
+  }
+  .pie .iconos {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .pie .iconos .fab {
+    padding: 1rem;
+  }
+  
+$redes: (
+    facebook: rgba(210, 210, 210, 0.681),
+    instagram: rgba(210, 210, 210, 0.681),
+    whatsapp:rgba(210, 210, 210, 0.681),
+    github:rgba(210, 210, 210, 0.681),
+);
+@each $redsocial, $colordered in $redes {
+    .fa-#{$redsocial} {
+        background-color: $colordered;
+    } 
+}
+.fa-facebook{
+border-radius: 5px;
+display: flex;
+justify-content: center;
+&:hover {
+    background-color: beige;
+} 
+}
+.fa-whatsapp {
+    @extend .fa-facebook
+}
+.fa-instagram {
+    @extend .fa-facebook
+}
+.fa-github {
+    @extend .fa-facebook
+}

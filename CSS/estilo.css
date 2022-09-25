@@ -14,6 +14,31 @@
   height: 100vh;
 }
 
+.menu__item {
+  -webkit-animation: swirl-in-fwd 0.6s ease-out both;
+  animation: swirl-in-fwd 0.6s ease-out both;
+}
+
+@-webkit-keyframes swirl-in-fwd {
+  0% {
+    transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes swirl-in-fwd {
+  0% {
+    transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
 .container-fluid {
   color: black;
   -webkit-text-decoration: dashed;
@@ -24,4 +49,47 @@
   background-color: rgb(78, 108, 108);
   height: 100vh;
   font-weight: 20px;
+}
+
+.pie {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.831);
+  color: white;
+  padding-block: 20px;
+}
+
+.pie .iconos {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pie .iconos .fab {
+  padding: 1rem;
+}
+
+.fa-facebook, .fa-github, .fa-instagram, .fa-whatsapp {
+  background-color: rgba(210, 210, 210, 0.681);
+}
+
+.fa-instagram {
+  background-color: rgba(210, 210, 210, 0.681);
+}
+
+.fa-whatsapp {
+  background-color: rgba(210, 210, 210, 0.681);
+}
+
+.fa-github {
+  background-color: rgba(210, 210, 210, 0.681);
+}
+
+.fa-facebook, .fa-github, .fa-instagram, .fa-whatsapp {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+.fa-facebook:hover, .fa-github:hover, .fa-instagram:hover, .fa-whatsapp:hover {
+  background-color: beige;
 }/*# sourceMappingURL=estilo.css.map */
