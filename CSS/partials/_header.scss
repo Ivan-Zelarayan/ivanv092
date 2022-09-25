@@ -3,8 +3,12 @@
     height: 100vh;
 }
 .menu__item{
-    -webkit-animation:swirl-in-fwd .6s ease-out both;animation:swirl-in-fwd .6s ease-out both;
+  -webkit-animation:slide-in-bck-center .7s cubic-bezier(.25,.46,.45,.94) both;
+  animation:slide-in-bck-center .7s cubic-bezier(.25,.46,.45,.94) both}
+
+@for $item from 1 through 4 {
+    .menu__item#{$item} {animation-delay:$item*0.1s;}
 }
 
 
- @-webkit-keyframes swirl-in-fwd{0%{-webkit-transform:rotate(-540deg) scale(0);transform:rotate(-540deg) scale(0);opacity:0}100%{-webkit-transform:rotate(0) scale(1);transform:rotate(0) scale(1);opacity:1}}@keyframes swirl-in-fwd{0%{-webkit-transform:rotate(-540deg) scale(0);transform:rotate(-540deg) scale(0);opacity:0}100%{-webkit-transform:rotate(0) scale(1);transform:rotate(0) scale(1);opacity:1}}
+ @-webkit-keyframes slide-in-bck-center{0%{-webkit-transform:translateZ(600px);transform:translateZ(600px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes slide-in-bck-center{0%{-webkit-transform:translateZ(600px);transform:translateZ(600px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
